@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csapatfelosztó</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Sorsoló</h1>
+        <div onclick="Balra()" id="balra"></div>
+        <h1 id="szam">10</h1>
+        <div onclick="Jobbra()" id="jobbra"></div>
+        <div id="emberek">
+            <div id="ember1"><input type="text"id="nev1"></div>
+            <div id="ember2"><input type="text"id="nev2"></div><br>
+            <div id="ember3"><input type="text"id="nev3"></div>
+            <div id="ember4"><input type="text"id="nev4"></div><br>
+            <div id="ember5"><input type="text"id="nev5"></div>
+            <div id="ember6"><input type="text"id="nev6"></div><br>
+            <div id="ember7"><input type="text"id="nev7"></div>
+            <div id="ember8"><input type="text"id="nev8"></div><br>
+            <div id="ember9"><input type="text"id="nev9"></div>
+            <div id="ember10"><input type="text" id="nev10"></div><br>
+        </div>
+        <button onclick="Sorsol()" id="gomb">Sorsolás</button>
+    </div>
+</body>
+<script>
+    var emberek = []
+    var emberSzam = 10
+    
+
+    function Balra() {
+        if(emberSzam == 4){
+            document.getElementById("balra").style.display = "none"
+        }
+        document.getElementById("jobbra").style.display = "block"
+        emberSzam--
+        document.getElementById("szam").innerHTML = emberSzam;
+        Sorsol()
+        Megjelen()
+    }
+
+    function Jobbra() {
+        if(emberSzam == 9){
+            document.getElementById("jobbra").style.display = "none"
+        }
+        document.getElementById("balra").style.display = "block"
+        emberSzam++
+        document.getElementById("szam").innerHTML = emberSzam;
+        Sorsol()
+        Megjelen()
+    }
+    function Sorsol(){
+        emberek = []
+        for (let i = 1; i <= emberSzam; i++) {
+            emberek[i-1] = document.getElementById("nev"+i).value
+            
+        }
+        
+        Megjelen()
+    }
+    function Megjelen() {
+        emberek.sort(() => Math.random() - 0.5)
+        for (let i = 1; i <= 10; i++) {
+            document.getElementById("ember"+i).style.display = "none"
+        }
+        for (let i = 1; i <= emberSzam; i++) {
+            document.getElementById("ember"+i).style.display = "block"
+            
+        }
+        for (let i = 1; i <= emberSzam; i++) {
+            document.getElementById("nev"+i).value = emberek[i-1]
+            
+        }
+    }
+    
+</script>
+</html>

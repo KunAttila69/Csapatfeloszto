@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(16, 68, 180);
+}
+#main{
+    background-color: rgb(16, 142, 180);
+    margin: auto;
+    height: 100vh;
+    width: 75vw;
+}
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 3vw;
+}
+#balra{
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 40px solid black;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 10vh;
+    left: 42.5vw;
+}
+#jobbra{
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 40px solid black;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10vh;
+    left: 55vw;
+}
+#szam{
+    color: black;
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table{
+    margin: auto;
+}
+td{
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+}
+#emberek div{
+    background-color: rgb(68, 112, 207);
+    width: 300px;
+    height: 100px;
+    float: right;
+    margin-right: 300px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 6.2vw;
+    font-size: 35px;
+}
+input{
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    height: 100px;
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+}
+#gomb{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 41vw;
+    bottom: 5vh;
+    font-size: 35px;
+    background-color: rgb(68, 112, 207);
+    border: 2.5px solid black;
+    border-radius: 5px;
+}
